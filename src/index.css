@@ -46,7 +46,7 @@ footer, header, hgroup, menu, nav, section {
 html,
 body {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 body {
 	line-height: 1;
