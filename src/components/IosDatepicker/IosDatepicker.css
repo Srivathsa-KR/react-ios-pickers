@@ -1,0 +1,6 @@
+.date-picker {
+    display: -webkit-box;
+    display: flex;
+    height: auto;
+    width: 100%;
+  }

@@ -1,0 +1,79 @@
+.wheel-picker-container {
+    --item-height: 50px;
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    height: calc(3 * var(--item-height));
+    position: relative;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    /* border: 1px solid black; */
+}
+.wheel-picker-container .wheel-container {
+    position: relative;
+    height: 100%;
+    padding-top: var(--item-height);
+}
+
+.wheel-picker-container .overlay-panel {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-panel .active-panel {
+    height: var(--item-height);
+    width: 100%;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    position: relative;
+    --passive-overlay-pos: calc(-1 * (var(--item-height) + 1px));
+}
+
+.active-panel:before,
+.active-panel:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: var(--item-height);
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+    /* border: 1px solid; */
+}
+
+.active-panel:before {
+    top: var(--passive-overlay-pos);
+}
+
+.active-panel:after {
+    bottom: var(--passive-overlay-pos);
+}
+
+.wheel-container .handle {
+    will-change: transform;
+}
+
+.wheel-container li {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
