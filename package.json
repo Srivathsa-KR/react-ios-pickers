@@ -2,6 +2,7 @@
   "name": "react-ios-pickers",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://srivathsa-kr.github.io/react-ios-pickers",
   "dependencies": {
     "cra-template": "1.2.0",
     "date-fns": "^4.1.0",
